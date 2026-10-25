@@ -1,0 +1,29 @@
+[project]
+name = "python-from-syntax-to-delivery"
+version = "0.1.0"
+description = "《Python教程：从语法到交付》配套代码"
+requires-python = ">=3.12.9,<3.13"
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = [".venv", "__pycache__", ".pytest_cache"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+exclude = '''
+/(\.venv|__pycache__|\.pytest_cache)/
+'''
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+warn_unused_configs = true
+exclude = ["(^|/)(\\.venv|__pycache__|\\.pytest_cache)/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

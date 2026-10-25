@@ -1,0 +1,46 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+
+# 构建与分发
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+sdist/
+
+# 覆盖率与测试报告
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# IDE 与编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 项目运行产物
+*.log
+out/
