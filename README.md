@@ -20,8 +20,8 @@
 | 编辑器 | PyCharm 社区版（推荐）、VS Code（备选） |
 | Git | 2.x |
 
-> 版本不在 3.12.9 时，先按书稿第 1 章与附录 A 卸载旧版并重装。其他 3.12.x 补丁版本通常也能运行示例，
-> 但书稿输出以 3.12.9 为准。
+> 版本不在 3.12.9 时，先按书稿第 1 章与附录 A 卸载旧版并重装。其他 3.12.x 补丁版本可能也能运行示例，
+> 但书稿输出以 3.12.9 为准，`pytest` 的环境验收会核对这一版本。
 
 ## 30 分钟快速开始
 
@@ -101,7 +101,7 @@ mypy .
 pytest
 ```
 
-四条命令与 GitHub Actions 中的 CI 完全一致，本地全绿即代表提交后 CI 大概率绿灯。
+四条命令与 GitHub Actions 中的 CI 一致，本地全绿即代表提交后 CI 大概率绿灯。
 
 ## 目录结构
 
@@ -110,6 +110,7 @@ python-from-syntax-to-delivery/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/          # 三个反馈模板：代码失败 / 文字错误 / 版本不一致
 │   └── workflows/ci.yml         # 三平台 × Python 3.12.9 的 CI
+├── .gitignore                   # 排除 .venv/ 与各类缓存
 ├── .pre-commit-config.yaml      # 提交前自动 ruff + black
 ├── pyproject.toml               # 依赖范围与 ruff / black / mypy / pytest 配置
 ├── requirements.txt             # 运行时依赖（精确锁定）
